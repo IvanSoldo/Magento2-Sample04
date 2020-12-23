@@ -1,0 +1,11 @@
+<?php
+/**
+ * @var Inchoo\Sample04\Block\ListNewsBlock $block
+ * @var \Inchoo\Sample04\ViewModel\NewsViewModel $newsViewModel
+ */
+$newsViewModel = $block->getData('newsList');
+?>
+
+<?php foreach ($newsViewModel->getNewsList() as $news): ?>
+    <h1><?= $news->getTitle() . ' ' . $news->getId() . ' ' . $news->getContent(); ?></h1>
+<?php endforeach; ?>

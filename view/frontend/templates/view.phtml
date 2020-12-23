@@ -1,0 +1,10 @@
+<?php
+/**
+ * @var \Inchoo\Sample04\Block\NewsViewBlock $block
+ * @var \Inchoo\Sample04\ViewModel\NewsViewModel $viewModel
+ */
+$newsData = $block->getViewModel();
+$news = $newsData->getNewsById($block->getNewsId());
+?>
+
+<h1><?= $news->getTitle()?></h1>
